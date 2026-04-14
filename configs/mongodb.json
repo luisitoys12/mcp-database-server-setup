@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "mongodb-readonly": {
+      "command": "npx",
+      "args": ["-y", "@nam088/mcp-database-server"],
+      "env": {
+        "DB_TYPE": "mongodb",
+        "MONGODB_CONNECTION_STRING": "mongodb://localhost:27017/mydb",
+        "READ_ONLY_MODE": "true"
+      }
+    }
+  }
+}

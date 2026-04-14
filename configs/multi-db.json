@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "supabase-postgres": {
+      "command": "npx",
+      "args": ["-y", "@nam088/mcp-database-server"],
+      "env": {
+        "DB_TYPE": "postgres",
+        "POSTGRES_CONNECTION_STRING": "postgresql://postgres.YOUR_PROJECT_REF:YOUR_SUPABASE_DB_PASSWORD@aws-0-us-east-1.pooler.supabase.com:6543/postgres",
+        "READ_ONLY_MODE": "true"
+      }
+    },
+    "redis-cache": {
+      "command": "npx",
+      "args": ["-y", "@nam088/mcp-database-server"],
+      "env": {
+        "DB_TYPE": "redis",
+        "REDIS_CONNECTION_STRING": "redis://localhost:6379",
+        "READ_ONLY_MODE": "false"
+      }
+    }
+  }
+}
